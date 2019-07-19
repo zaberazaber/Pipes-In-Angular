@@ -1,0 +1,153 @@
+<!-- UPPERCASE PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is '{{lowerCaseTitle}}'</strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedUpperCase = !isCollapsedUpperCase">
+     Uppercase Pipe Output
+    </button>
+</div>
+<div id="collapseUpperCase" [ngbCollapse]="!isCollapsedUpperCase" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            <b>{{lowerCaseTitle | uppercase}}</b>
+        </div>
+    </div>
+</div>
+
+
+<!-- LOWERCASE PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is '{{upperCaseTitle}}'</strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedLowerCase = !isCollapsedLowerCase">
+      Lowercase Pipe Output
+    </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="!isCollapsedLowerCase" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            <b>{{upperCaseTitle | lowercase}}</b>
+        </div>
+    </div>
+</div>
+
+
+<!-- CURRENCY PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is '{{currencyValue}}'</strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedCurrency = !isCollapsedCurrency">
+          Currency Pipe Output
+        </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="!isCollapsedCurrency" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            <b>{{currencyValue | currency:"USD"}}</b><br/>
+            <b> {{currencyValue | currency:"USD": false}}</b>
+            <!-- Boolean true is used to get the sign of the currency. -->
+        </div>
+    </div>
+</div>
+
+
+<!-- DATE PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is '{{dateValue}}'</strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedDate = !isCollapsedDate">
+              Date Pipe Output
+            </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="!isCollapsedDate" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            {{"03/17/2018" |date | uppercase | slice:0:3}}
+            <b>{{dateValue | date:'d/M/y'}}</b><br/>
+            <b>{{dateValue | date:'shortTime'}}</b><br/>
+            <b>{{dateValue | date:'shortDate'}}</b><br/>
+            <b>{{dateValue | date:'longDate'}}</b>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- DECIMAL PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is '{{decimalValue}}'</strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedDecimal = !isCollapsedDecimal">
+                  Decimal Pipe Output
+                </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="!isCollapsedDecimal" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            <b>{{ decimalValue | number: '3.4' }}</b>
+            <!-- 3 is for main integer, 4 -4 are for integers to be displayed. -->
+        </div>
+    </div>
+</div>
+
+
+<!-- JSON PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is {{jsonValue}}  //dont worry its intentional</strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedJson = !isCollapsedJson">
+                      Json Pipe Output
+                    </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="!isCollapsedJson" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            <b>{{ jsonValue | json }}</b>
+        </div>
+    </div>
+</div>
+
+
+<!-- PERCENTAGE PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is '{{percentageValue}}' </strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedPercentage = !isCollapsedPercentage">
+                          Percentage Pipe Output
+                        </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="!isCollapsedPercentage" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            <b>{{ percentageValue | percent }}</b>
+        </div>
+    </div>
+</div>
+
+
+<!-- SLICE PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is '{{sliceValue}}'' </strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedSlice = !isCollapsedSlice">
+                              Slice Pipe Output
+                            </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="!isCollapsedSlice" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            <b>{{ sliceValue | slice:2:4 }}</b>
+        </div>
+    </div>
+</div>
+
+
+<!-- CUSTOME PIPE -->
+<div class="container" style="padding:10px">
+    <div><strong>Input is '{{customValue}}' </strong></div>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsedCustom = !isCollapsedCustom">
+                                  Custome Pipe Output
+                                </button>
+</div>
+<div id="collapseExample" [ngbCollapse]="!isCollapsedCustom" class="container" style="padding:10px">
+    <div class="card">
+        <div class="card-body">
+            <b>{{ customValue | ellipsis:17 }}</b>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="padding-bottom: 20px"></div>
